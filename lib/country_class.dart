@@ -2,7 +2,6 @@ class Country {
   final int confirmed;
   final int recovered;
   final int deaths;
-
   final String name;
 
   Country(
