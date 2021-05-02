@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:main/homepage.dart';
+import 'package:main/splash_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Lemon",
         primarySwatch: Colors.blueGrey,
       ),
-      home: HomePage(),
+      home: FirstScreen(),
     );
   }
 }

@@ -119,7 +119,10 @@ class _HomePageState extends State<HomePage> {
                 sortColumnIndex: _srtIndex,
                 columns: [
                   DataColumn(
-                      label: Text("Country"),
+                      label: Text(
+                        "Country",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                       onSort: (index, srtAsc) {
                         if (srtAsc)
                           setState(() {
@@ -137,7 +140,10 @@ class _HomePageState extends State<HomePage> {
                   DataColumn(
                       label: Text(
                         "Confirmed",
-                        style: TextStyle(color: Colors.redAccent[100]),
+                        style: TextStyle(
+                          color: Colors.redAccent[100],
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       numeric: true,
                       onSort: (index, srtAsc) {
@@ -158,7 +164,10 @@ class _HomePageState extends State<HomePage> {
                   DataColumn(
                       label: Text(
                         "Active",
-                        style: TextStyle(color: Colors.blueAccent),
+                        style: TextStyle(
+                          color: Colors.blueAccent,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       numeric: true,
                       onSort: (index, srtAsc) {
@@ -178,7 +187,10 @@ class _HomePageState extends State<HomePage> {
                   DataColumn(
                       label: Text(
                         "Recovered",
-                        style: TextStyle(color: Colors.greenAccent),
+                        style: TextStyle(
+                          color: Colors.greenAccent,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       numeric: true,
                       onSort: (index, srtAsc) {
@@ -199,7 +211,10 @@ class _HomePageState extends State<HomePage> {
                   DataColumn(
                       label: Text(
                         "Deceased",
-                        style: TextStyle(color: Colors.grey),
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       numeric: true,
                       onSort: (index, srtAsc) {
@@ -247,7 +262,12 @@ class _HomePageState extends State<HomePage> {
                 sortColumnIndex: _stateIndex,
                 columns: [
                   DataColumn(
-                      label: Text("State"),
+                      label: Text(
+                        "State",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                       onSort: (index, srtAsc) {
                         if (srtAsc)
                           setState(() {
@@ -265,7 +285,10 @@ class _HomePageState extends State<HomePage> {
                   DataColumn(
                       label: Text(
                         "Confirmed",
-                        style: TextStyle(color: Colors.redAccent[100]),
+                        style: TextStyle(
+                          color: Colors.redAccent[100],
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       numeric: true,
                       onSort: (index, srtAsc) {
@@ -287,7 +310,10 @@ class _HomePageState extends State<HomePage> {
                   DataColumn(
                       label: Text(
                         "Active",
-                        style: TextStyle(color: Colors.blueAccent),
+                        style: TextStyle(
+                          color: Colors.blueAccent,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       numeric: true,
                       onSort: (index, srtAsc) {
@@ -307,7 +333,10 @@ class _HomePageState extends State<HomePage> {
                   DataColumn(
                       label: Text(
                         "Recovered",
-                        style: TextStyle(color: Colors.greenAccent),
+                        style: TextStyle(
+                          color: Colors.greenAccent,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       numeric: true,
                       onSort: (index, srtAsc) {
@@ -328,7 +357,10 @@ class _HomePageState extends State<HomePage> {
                   DataColumn(
                       label: Text(
                         "Deceased",
-                        style: TextStyle(color: Colors.grey),
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       numeric: true,
                       onSort: (index, srtAsc) {
