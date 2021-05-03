@@ -11,20 +11,20 @@ class FirstScreen extends StatefulWidget {
 
 class _FirstScreenState extends State<FirstScreen> {
   List<String> cautions = [
-    "Maintain at least 6-feet social distance.",
+    "Maintain at least 6-feet of social distance.",
     "Avoid touching your eyes, nose and mouth.",
     "Wear a mask or two!",
   ];
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-      seconds: 3,
+      seconds: 4,
       navigateAfterSeconds: HomePage(),
       gradientBackground: RadialGradient(
         colors: [Colors.blueGrey, Colors.blueGrey[800]],
       ),
       styleTextUnderTheLoader: TextStyle(),
-      photoSize: 110,
+      photoSize: 150,
       image: Image.asset("assets/images/COVID.png"),
       title: Text(
         cautions[Random().nextInt(cautions.length)],
