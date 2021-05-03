@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:main/country_class.dart';
 import 'package:main/state_page.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -103,6 +104,101 @@ class _HomePageState extends State<HomePage> {
                   fontFamily: "Lemon",
                   color: Colors.grey[800],
                 )),
+            actions: [
+              IconButton(
+                  icon: Icon(
+                    Icons.info_outline_rounded,
+                    color: Colors.blueGrey[200],
+                  ),
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        barrierDismissible: true,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            content: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: 8),
+                                  child: Text("API's Used"),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 14.0),
+                                  child: GestureDetector(
+                                    child: Text(
+                                      "- Coutry-Wise",
+                                      style: TextStyle(
+                                        color: Colors.blue,
+                                        decoration: TextDecoration.underline,
+                                      ),
+                                    ),
+                                    onTap: () => launch("https://github.com/M-Media-Group/Covid-19-API"),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 14.0),
+                                  child: GestureDetector(
+                                    child: Text(
+                                      "- State-Wise(India)",
+                                      style: TextStyle(
+                                        color: Colors.blue,
+                                        decoration: TextDecoration.underline,
+                                      ),
+                                    ),
+                                    onTap: () => launch("https://github.com/apify/covid-19"),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: 8),
+                                  child: Text("Github Repo :"),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 14.0),
+                                  child: GestureDetector(
+                                    child: Text(
+                                      "- Repository",
+                                      style: TextStyle(
+                                        color: Colors.blue,
+                                        decoration: TextDecoration.underline,
+                                      ),
+                                    ),
+                                    onTap: () => launch("https://github.com/CrisesKhaos/COVID-19"),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: 8),
+                                  child: Text("Made by -"),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 12.0),
+                                  child: GestureDetector(
+                                    child: Text(
+                                      "- Vedant Tewari",
+                                      style: TextStyle(
+                                        color: Colors.blue,
+                                        decoration: TextDecoration.underline,
+                                      ),
+                                    ),
+                                    onTap: () => launch("https://github.com/CrisesKhaos"),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            actions: <Widget>[
+                              // ignore: deprecated_member_use
+                              FlatButton(
+                                child: Text("OK"),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ],
+                          );
+                        });
+                  })
+            ],
             bottom: TabBar(
               indicatorColor: Colors.blueGrey[200],
               indicatorSize: TabBarIndicatorSize.label,
