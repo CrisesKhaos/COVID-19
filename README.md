@@ -2,7 +2,7 @@
 
 This app was built using flutter and COVID-19 API's.
 
-[Latest .apk]()
+[Latest .apk](https://drive.google.com/file/d/1yWeJmPpukMyLniQ1B6iVIlUamPdTIQRI/view?usp=sharing)
 
 API's used -
   <br> -> https://covid-api.mmediagroup.fr/v1/cases
